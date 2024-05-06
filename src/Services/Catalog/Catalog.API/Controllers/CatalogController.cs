@@ -20,8 +20,8 @@ namespace Catalog.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            var ;
-            return Ok(products);products = await _repository.GetProducts()
+            var products = await _repository.GetProducts();
+            return Ok(products);
         }
 
         [HttpGet("{id:length(24)}", Name = "GetProduct")]
